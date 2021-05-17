@@ -167,16 +167,16 @@ which mplayer || exit 2
 which youtube-dl || exit 2
 echo -e "${BGREEN}DEBUG: You have all the binaries you need!...${NOCOLOR}"
 
-if ! [ -f /var/cache/stillalive/Portal_-_Still_Alive.mp3 ]; then
+if ! [ -f Portal_-_Still_Alive-Y6ljFaKRTrI.mp3 ]; then
 	echo -e "${BYELLOW}DEBUG: Caching music in local folder...${NOCOLOR}"
-	youtube-dl --extract-audio --audio-format mp3 --restrict-filenames -o "/var/cache/stillalive/%(title)s.%(ext)s" https://www.youtube.com/watch?v=Y6ljFaKRTrI
+	youtube-dl --extract-audio --audio-format mp3 --restrict-filenames https://www.youtube.com/watch?v=Y6ljFaKRTrI
 else
 	echo -e "${BGREEN}DEBUG: Coolio: music is already cached!${NOCOLOR}"
 fi
 
 echo -e "${BORANGE}MUSIC: Still Alive from at the end of Portal during the credits, by Jonathan Coulton: http://www.jonathancoulton.com .${NOCOLOR}"
 
-mplayer /var/cache/stillalive/Portal_-_Still_Alive.mp3 >/dev/null 2>/dev/null &
+mplayer Portal_-_Still_Alive-Y6ljFaKRTrI.mp3 >/dev/null 2>/dev/null &
 
 type "Test Assesment Report|0.2"
 type "Subject 5646548-1337-EGGZ|0.1"
